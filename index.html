@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EMCO Broadband — Compare Internet & Cell Phone Plans at Your Address</title>
+  <meta name="description" content="Compare every internet provider and cell phone plan available at your address. Fiber, cable, 5G home internet and satellite — order online or by phone, free.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <a class="logo" href="#top" aria-label="EMCO Broadband home">emco<span>.</span><small class="mono">broadband</small></a>
+    <nav class="nav-links">
+      <a href="#compare" data-tab-link="internet">Internet</a>
+      <a href="#compare" data-tab-link="mobile">Cell Plans</a>
+      <a href="#phones">Phones</a>
+      <a href="#finder">Speed Finder</a>
+      <a href="#coverage">Coverage</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="tel:+18885550142" class="call-link"><span class="live-dot"></span>(888) 555‑0142</a>
+      <button class="cart-btn" aria-label="Cart"><span>Cart</span> <span class="cart-count">0</span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="container">
+        <p class="eyebrow mono" data-reveal><span class="live-dot"></span>2,800+ providers · updated daily</p>
+        <h1 class="hero-title" aria-label="Find the best internet at your address.">
+          <span class="line"><span class="w">Find the best</span></span>
+          <span class="line"><span class="w"><span class="rotator serif"><span class="rot-sizer" aria-hidden="true">phone deal.</span><span class="rw">internet.</span><span class="rw">fiber deal.</span><span class="rw">5G plan.</span><span class="rw">phone deal.</span></span></span></span>
+        </h1>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="lead" data-reveal style="--d:.3s">Every internet provider and cell plan available at your address, in one honest comparison. Order online or talk to a real person. Always free.</p>
+            <form class="address" id="heroForm" data-reveal style="--d:.4s">
+              <svg class="pin" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.7"/></svg>
+              <input type="text" placeholder="Enter your ZIP or street address" aria-label="ZIP or address">
+              <button class="btn btn-ink magnetic" type="submit"><span>Compare plans</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </form>
+            <div class="hero-proof mono" data-reveal style="--d:.5s">
+              <span>★ 4.8 · 9,200 reviews</span><span>100% free service</span><span>No spam calls</span>
+            </div>
+          </div>
+
+          <!-- animated live results preview -->
+          <div class="results-card" data-reveal style="--d:.35s">
+            <div class="rc-head mono"><span>Results for <b id="rcZip">75201</b></span><span id="rcCount">Searching…</span></div>
+            <div class="rc-bar"><i></i></div>
+            <div class="rc-list" id="rcList"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROVIDER MARQUEE -->
+    <div class="marquee" aria-label="Providers we compare">
+      <div class="marquee-track">
+        <span>AT&amp;T Fiber</span><span>Spectrum</span><span>Xfinity</span><span>Verizon Fios</span><span>T‑Mobile</span><span>Google Fiber</span><span>Starlink</span><span>Frontier</span><span>Cox</span><span>Visible</span><span>Mint Mobile</span>
+        <span>AT&amp;T Fiber</span><span>Spectrum</span><span>Xfinity</span><span>Verizon Fios</span><span>T‑Mobile</span><span>Google Fiber</span><span>Starlink</span><span>Frontier</span><span>Cox</span><span>Visible</span><span>Mint Mobile</span>
+      </div>
+    </div>
+
+    <!-- COMPARE -->
+    <section class="section" id="compare">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow mono">01 — Compare</p>
+            <h2 class="h2" data-reveal>Every plan, <span class="serif">side by side.</span></h2>
+          </div>
+          <div class="tabs" role="tablist">
+            <span class="tab-indicator"></span>
+            <button class="tab is-active" role="tab" data-tab="internet">Home Internet</button>
+            <button class="tab" role="tab" data-tab="mobile">Cell Phone Plans</button>
+          </div>
+        </div>
+
+        <div class="compare-tools">
+          <div class="chips" id="chips"></div>
+          <div class="sort mono">
+            <span>Sort</span>
+            <button class="on" data-sort="rec">Recommended</button>
+            <button data-sort="price">Lowest price</button>
+            <button data-sort="metric">Fastest</button>
+          </div>
+        </div>
+        <div class="rows-head mono"><span>Provider</span><span>Type</span><span id="metricHead">Download speed</span><span>Price</span><span></span></div>
+        <div class="rows" id="rows"></div>
+        <p class="fine mono">Pricing & availability vary by address. Prices shown are sample rates for this prototype.</p>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section how" id="how">
+      <div class="container">
+        <p class="eyebrow mono">02 — How it works</p>
+        <h2 class="h2" data-reveal>Switching, <span class="serif">minus the headache.</span></h2>
+        <div class="steps-line"><i id="stepsLine"></i></div>
+        <div class="steps">
+          <div class="step-card" data-reveal><span class="step-num serif">1</span><h3>Enter your address</h3><p>We check live availability across 2,800+ providers. Only the plans you can actually get.</p></div>
+          <div class="step-card" data-reveal style="--d:.1s"><span class="step-num serif">2</span><h3>Compare honestly</h3><p>Real prices after promos, data caps, contracts and fees, laid out side by side.</p></div>
+          <div class="step-card" data-reveal style="--d:.2s"><span class="step-num serif">3</span><h3>Order your way</h3><p>Check out online in minutes, or call and a local expert sets everything up for you.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHONES (horizontal scroll) -->
+    <section class="phones" id="phones">
+      <div class="phones-sticky">
+        <div class="container phones-head">
+          <div>
+            <p class="eyebrow mono">03 — Phones</p>
+            <h2 class="h2">New phones. <span class="serif">Better carrier deals.</span></h2>
+          </div>
+          <div class="phones-meta">
+            <span class="mono">Scroll to browse</span>
+            <div class="progress"><span id="phonesProgress"></span></div>
+          </div>
+        </div>
+        <div class="phones-track" id="phonesTrack"></div>
+      </div>
+    </section>
+
+    <!-- SPEED FINDER -->
+    <section class="section" id="finder">
+      <div class="container finder-grid">
+        <div>
+          <p class="eyebrow mono">04 — Speed finder</p>
+          <h2 class="h2" data-reveal>How much speed <span class="serif">do you need?</span></h2>
+
+          <div class="step" data-reveal>
+            <div class="step-label"><h4>People in your home</h4><span class="mono muted" id="peopleLabel">2 people</span></div>
+            <div class="seg">
+              <span class="seg-thumb"></span>
+              <button data-people="1">1</button><button data-people="2">2</button><button data-people="3">3</button><button data-people="4">4</button><button data-people="5">5+</button>
+            </div>
+          </div>
+
+          <div class="step" data-reveal>
+            <div class="step-label"><h4>What do you use it for?</h4><span class="mono muted">Pick all that apply</span></div>
+            <div class="choice-grid">
+              <button class="choice" data-use="stream"><b>4K streaming</b><span>Netflix, YouTube TV</span></button>
+              <button class="choice" data-use="game"><b>Gaming</b><span>Online & downloads</span></button>
+              <button class="choice" data-use="wfh"><b>Work from home</b><span>Video calls, uploads</span></button>
+              <button class="choice" data-use="smart"><b>Smart home</b><span>Cameras, devices</span></button>
+              <button class="choice" data-use="basic"><b>The basics</b><span>Email, browsing</span></button>
+              <button class="choice" data-use="creator"><b>Creator</b><span>Big uploads, live</span></button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="summary" data-reveal>
+          <div class="sum-head mono"><span>Your recommendation</span><span>Live</span></div>
+          <div class="gauge">
+            <svg viewBox="0 0 200 116" aria-hidden="true">
+              <path class="gauge-track" d="M16 108 A84 84 0 0 1 184 108" pathLength="100"/>
+              <path class="gauge-fill" d="M16 108 A84 84 0 0 1 184 108" pathLength="100"/>
+            </svg>
+            <div class="gauge-value"><span id="recNum">0</span><small class="mono">Mbps recommended</small></div>
+          </div>
+          <div class="sum-rows" id="recRows"></div>
+          <button class="btn btn-light full" id="seeMatches"><span>See matching plans</span></button>
+        </aside>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="container stats">
+      <div class="stat" data-reveal><b data-count="2800" data-suffix="+">0</b><span>Providers compared</span></div>
+      <div class="stat" data-reveal style="--d:.08s"><b data-count="312" data-prefix="$">0</b><span>Avg. yearly savings</span></div>
+      <div class="stat" data-reveal style="--d:.16s"><b data-count="4.8" data-dec="1" data-suffix="★">0</b><span>Customer rating</span></div>
+      <div class="stat" data-reveal style="--d:.24s"><b data-count="0" data-prefix="$">0</b><span>Cost to you, ever</span></div>
+    </section>
+
+    <!-- COVERAGE -->
+    <section class="section" id="coverage">
+      <div class="container coverage-grid">
+        <div>
+          <p class="eyebrow mono">05 — Coverage</p>
+          <h2 class="h2" data-reveal>See what's live <span class="serif">on your street.</span></h2>
+          <p class="lead" data-reveal>Fiber, cable, 5G home internet and satellite availability, checked at the address level. Not just by ZIP.</p>
+          <form class="address" id="zipForm" data-reveal>
+            <input type="text" inputmode="numeric" placeholder="ZIP code" aria-label="ZIP code" maxlength="10">
+            <button class="btn btn-ink magnetic" type="submit"><span>Check coverage</span></button>
+          </form>
+          <p class="form-result" id="zipResult" aria-live="polite"></p>
+        </div>
+        <div class="map" data-reveal>
+          <canvas id="mapCanvas"></canvas>
+          <div class="map-legend mono"><span><i></i>Live signal</span><span><i class="ink"></i>Service area</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq">
+      <div class="container faq-grid">
+        <div>
+          <p class="eyebrow mono">06 — Questions</p>
+          <h2 class="h2" data-reveal>Straight <span class="serif">answers.</span></h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item"><button class="faq-q">Is EMCO Broadband really free?<i></i></button><div class="faq-a"><div><p>Yes. Providers pay us when you sign up, so you never pay extra. You get the same price, or better, than going direct.</p></div></div></div>
+          <div class="faq-item"><button class="faq-q">How do you rank providers?<i></i></button><div class="faq-a"><div><p>"Recommended" weighs real price after promos, speed, contract terms and customer ratings. You can re-sort by price or speed any time.</p></div></div></div>
+          <div class="faq-item"><button class="faq-q">Can I keep my phone number when switching carriers?<i></i></button><div class="faq-a"><div><p>Absolutely. We'll port your number during checkout. Most transfers finish within minutes.</p></div></div></div>
+          <div class="faq-item"><button class="faq-q">Will I get spam calls after entering my address?<i></i></button><div class="faq-a"><div><p>No. We never sell your info. We only call if you ask us to.</p></div></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CTA / FOOTER -->
+  <footer class="cta">
+    <div class="container">
+      <div class="cta-row">
+        <h2 class="h2" data-reveal>Better internet is <span class="serif">one search away.</span></h2>
+        <div class="cta-actions">
+          <a href="#top" class="btn btn-light magnetic"><span>Compare plans</span></a>
+          <a href="tel:+18885550142" class="btn btn-ghost"><span>Call (888) 555‑0142</span></a>
+        </div>
+      </div>
+      <div class="wordmark" aria-hidden="true"><span style="--i:0">e</span><span style="--i:1">m</span><span style="--i:2">c</span><span style="--i:3">o</span><span class="dot" style="--i:4">.</span></div>
+      <div class="footer-row mono">
+        <span>© 2026 EMCO Broadband · emcobroadband.com</span>
+        <nav><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Accessibility</a><a href="#">Advertiser disclosure</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status"><i></i><span id="toastText">Added to cart</span></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
