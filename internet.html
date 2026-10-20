@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home Internet Plans — Compare Fiber, Cable & 5G | We Sell Broadband</title>
+  <meta name="description" content="Compare high-speed home internet providers in your area. Symmetrical fiber, reliable cable, and fast 5G home internet side by side.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <a class="logo" href="index.html" aria-label="We Sell Broadband home">wesell<span>.</span><small class="mono">broadband</small></a>
+    <nav class="nav-links">
+      <a href="internet.html" class="active">Internet</a>
+      <a href="mobile.html">Cell Plans</a>
+      <a href="phones.html">Phones</a>
+      <a href="deals.html">Deals</a>
+      <a href="coverage.html">Coverage</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="tel:+18885550142" class="call-link"><span class="live-dot"></span>(888) 555‑0142</a>
+      <a href="cart.html" class="cart-btn" aria-label="Cart"><span>Cart</span> <span class="cart-count">0</span></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow mono" data-reveal><span class="live-dot"></span>Over 2,800 Internet Providers</p>
+        <h1 class="h1" data-reveal style="--d:.1s">Home Internet <span class="serif">done right.</span></h1>
+        <p class="lead" data-reveal style="--d:.2s">Find fiber, cable, 5G home internet and satellite available at your exact address. Filter by speed, pricing tiers, and contract policies.</p>
+        
+        <form class="address address-lg" id="searchFilterForm" data-reveal style="--d:.3s">
+          <svg class="pin" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.7"/></svg>
+          <input type="text" id="filterAddrInput" placeholder="Enter ZIP or street address to check local speeds" aria-label="ZIP or Address" value="75201">
+          <button class="btn btn-ink" type="submit"><span>Update Location</span></button>
+        </form>
+      </div>
+    </section>
+
+    <!-- INTERNET PLANS DIRECTORY -->
+    <section class="section" style="padding-top: 40px;">
+      <div class="container">
+        <div class="compare-tools">
+          <div class="chips" id="internetChips">
+            <button class="chip on" data-type="All">All Types</button>
+            <button class="chip" data-type="Fiber">Fiber (Fastest)</button>
+            <button class="chip" data-type="Cable">Cable</button>
+            <button class="chip" data-type="5G Home">5G Home Internet</button>
+            <button class="chip" data-type="Satellite">Satellite (Rural)</button>
+          </div>
+          <div class="sort mono">
+            <span>Sort by</span>
+            <button class="on" data-sort="rec">Recommended</button>
+            <button data-sort="price-low">Lowest Price</button>
+            <button data-sort="speed-high">Max Speed</button>
+          </div>
+        </div>
+
+        <div class="rows-head mono">
+          <span>Provider & Plan</span>
+          <span>Connection</span>
+          <span>Download / Upload</span>
+          <span>Monthly Rate</span>
+          <span>Action</span>
+        </div>
+        <div class="rows" id="internetRows"></div>
+
+        <!-- EDUCATIONAL ACCORDION / GUIDE -->
+        <div class="info-banner" data-reveal style="margin-top: 60px;">
+          <div class="info-grid">
+            <div>
+              <span class="mono accent">Buying Guide</span>
+              <h3 style="font-size: 28px; margin: 8px 0 12px; font-weight: 600;">Fiber vs Cable vs 5G</h3>
+              <p style="color: var(--muted); line-height: 1.6;"><b>Fiber</b> delivers symmetrical upload & download speeds ideal for gaming and large work files. <b>Cable</b> is widely available with fast downloads up to 1 Gig. <b>5G Home Internet</b> requires no technician visits or cables—plug the gateway into any wall outlet.</p>
+            </div>
+            <div class="info-badges">
+              <div class="badge-card"><b>99.9%</b><span>Uptime Guarantee</span></div>
+              <div class="badge-card"><b>$0</b><span>Hidden Equipment Fees</span></div>
+              <div class="badge-card"><b>30-Day</b><span>Money-Back Guarantees</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="cta">
+    <div class="container">
+      <div class="cta-row">
+        <h2 class="h2">Ready to switch? <span class="serif">We make it painless.</span></h2>
+        <div class="cta-actions">
+          <a href="tel:+18885550142" class="btn btn-light"><span>Call (888) 555‑0142</span></a>
+          <a href="cart.html" class="btn btn-ghost"><span>View Cart (<span class="cart-count">0</span>)</span></a>
+        </div>
+      </div>
+      <div class="wordmark" aria-hidden="true"><span>w</span><span>e</span><span>s</span><span>e</span><span>l</span><span>l</span><span class="dot">.</span></div>
+      <div class="footer-row mono">
+        <span>© 2026 We Sell Broadband · wesellbroadband.com</span>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="internet.html">Internet</a>
+          <a href="mobile.html">Cell Plans</a>
+          <a href="phones.html">Phones</a>
+          <a href="coverage.html">Coverage</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status"><i></i><span id="toastText">Added to cart</span></div>
+  <script src="app.js"></script>
+</body>
+</html>

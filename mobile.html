@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cell Phone Plans — Unlimited 5G, Prepaid & Family Deals | We Sell Broadband</title>
+  <meta name="description" content="Compare the best cell phone plans with unlimited 5G data, high-speed mobile hotspot, and multi-line savings from top nationwide carriers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <a class="logo" href="index.html" aria-label="We Sell Broadband home">wesell<span>.</span><small class="mono">broadband</small></a>
+    <nav class="nav-links">
+      <a href="internet.html">Internet</a>
+      <a href="mobile.html" class="active">Cell Plans</a>
+      <a href="phones.html">Phones</a>
+      <a href="deals.html">Deals</a>
+      <a href="coverage.html">Coverage</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="tel:+18885550142" class="call-link"><span class="live-dot"></span>(888) 555‑0142</a>
+      <a href="cart.html" class="cart-btn" aria-label="Cart"><span>Cart</span> <span class="cart-count">0</span></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow mono" data-reveal><span class="live-dot"></span>Compare Tier 1 Networks & Prepaid MVNOs</p>
+        <h1 class="h1" data-reveal style="--d:.1s">Mobile plans without <span class="serif">the markup.</span></h1>
+        <p class="lead" data-reveal style="--d:.2s">Unlimited premium 5G data, generous hotspot allowances, and massive multi-line discounts. Keep your existing phone and number or bundle with a new device.</p>
+      </div>
+    </section>
+
+    <!-- MOBILE DIRECTORY -->
+    <section class="section" style="padding-top: 30px;">
+      <div class="container">
+        <div class="compare-tools">
+          <div class="chips" id="mobileChips">
+            <button class="chip on" data-type="All">All Plans</button>
+            <button class="chip" data-type="Unlimited 5G">Unlimited 5G</button>
+            <button class="chip" data-type="Prepaid">Prepaid / Budget</button>
+            <button class="chip" data-type="Family Plans">Family Plans</button>
+          </div>
+          <div class="sort mono">
+            <span>Lines</span>
+            <button class="on" data-lines="1">1 Line</button>
+            <button data-lines="2">2 Lines</button>
+            <button data-lines="3">3 Lines</button>
+            <button data-lines="4">4 Lines (Save 40%)</button>
+          </div>
+        </div>
+
+        <div class="rows-head mono">
+          <span>Carrier & Plan</span>
+          <span>Category</span>
+          <span>5G Data & Hotspot</span>
+          <span>Per Line / Mo</span>
+          <span>Action</span>
+        </div>
+        <div class="rows" id="mobileRows"></div>
+
+        <!-- PERKS CALLOUT -->
+        <div class="perks-grid" data-reveal style="margin-top: 60px;">
+          <div class="perk-box">
+            <span class="mono accent">01 / Porting</span>
+            <h4>Keep Your Number</h4>
+            <p>Switching carriers takes less than 15 minutes. We transfer your existing mobile number automatically with 0 downtime.</p>
+          </div>
+          <div class="perk-box">
+            <span class="mono accent">02 / Compatibility</span>
+            <h4>eSIM Ready in 60s</h4>
+            <p>No waiting for plastic SIM cards in the mail. Activate instantly with digital eSIM on any modern iPhone or Android.</p>
+          </div>
+          <div class="perk-box">
+            <span class="mono accent">03 / Freedom</span>
+            <h4>Zero Contracts</h4>
+            <p>Every plan featured is prepaid or month-to-month. Change plans or cancel whenever you choose without penalty.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="cta">
+    <div class="container">
+      <div class="cta-row">
+        <h2 class="h2">Have questions on mobile plans? <span class="serif">Talk to an agent.</span></h2>
+        <div class="cta-actions">
+          <a href="tel:+18885550142" class="btn btn-light"><span>Call (888) 555‑0142</span></a>
+          <a href="cart.html" class="btn btn-ghost"><span>View Cart (<span class="cart-count">0</span>)</span></a>
+        </div>
+      </div>
+      <div class="wordmark" aria-hidden="true"><span>w</span><span>e</span><span>s</span><span>e</span><span>l</span><span>l</span><span class="dot">.</span></div>
+      <div class="footer-row mono">
+        <span>© 2026 We Sell Broadband · wesellbroadband.com</span>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="internet.html">Internet</a>
+          <a href="mobile.html">Cell Plans</a>
+          <a href="phones.html">Phones</a>
+          <a href="coverage.html">Coverage</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status"><i></i><span id="toastText">Added to cart</span></div>
+  <script src="app.js"></script>
+</body>
+</html>

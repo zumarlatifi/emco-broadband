@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nationwide 5G & Fiber Coverage Map | We Sell Broadband</title>
+  <meta name="description" content="Check cell phone and high-speed internet availability at your address. Interactive radar coverage for 5G Ultra Wideband, Fiber, and Cable.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="cursor" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <a class="logo" href="index.html" aria-label="We Sell Broadband home">wesell<span>.</span><small class="mono">broadband</small></a>
+    <nav class="nav-links">
+      <a href="internet.html">Internet</a>
+      <a href="mobile.html">Cell Plans</a>
+      <a href="phones.html">Phones</a>
+      <a href="deals.html">Deals</a>
+      <a href="coverage.html" class="active">Coverage</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="tel:+18885550142" class="call-link"><span class="live-dot"></span>(888) 555‑0142</a>
+      <a href="cart.html" class="cart-btn" aria-label="Cart"><span>Cart</span> <span class="cart-count">0</span></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow mono" data-reveal><span class="live-dot"></span>Live Network Radar Data</p>
+        <h1 class="h1" data-reveal style="--d:.1s">Address-Level <span class="serif">Coverage.</span></h1>
+        <p class="lead" data-reveal style="--d:.2s">Enter your street address to see exactly which fiber lines, cable taps, and 5G mid-band towers reach your home.</p>
+        
+        <form class="address address-lg" id="coverageSearchForm" data-reveal style="--d:.3s">
+          <svg class="pin" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.7"/></svg>
+          <input type="text" id="coverageInput" placeholder="Enter ZIP or full street address (e.g., 75201)" aria-label="ZIP or Address" value="75201">
+          <button class="btn btn-ink" type="submit"><span>Scan Address</span></button>
+        </form>
+        <p class="form-result show" id="coverageResult" style="margin-top: 14px; font-weight: 500;"></p>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE MAP & DETAILS -->
+    <section class="section" style="padding-top: 20px;">
+      <div class="container coverage-page-grid">
+        <div class="map-large">
+          <canvas id="mapCanvas"></canvas>
+          <div class="map-legend mono">
+            <span><i style="background:var(--accent);"></i>Fiber Ultra (1-5 Gig)</span>
+            <span><i style="background:var(--blue);"></i>5G Ultra Capacity</span>
+            <span><i class="ink"></i>Cable Broadband</span>
+          </div>
+        </div>
+
+        <div class="coverage-details">
+          <h3 style="font-size: 26px; font-weight: 600; letter-spacing: -0.03em; margin-bottom: 20px;">Networks Found for <span id="currentScannedZip">75201</span></h3>
+          <div class="network-cards" id="networkCards">
+            <div class="net-card">
+              <div class="net-head"><b>AT&T Fiber</b><span class="badge-tag">99.8% Coverage</span></div>
+              <p>Symmetrical up to 5,000 Mbps. Underground fiber drop available.</p>
+            </div>
+            <div class="net-card">
+              <div class="net-head"><b>Spectrum DOCSIS 3.1</b><span class="badge-tag" style="background:var(--ink);">100% Coverage</span></div>
+              <p>Gigabit cable downloads with self-install kit delivered in 24 hours.</p>
+            </div>
+            <div class="net-card">
+              <div class="net-head"><b>T-Mobile 5G Ultra</b><span class="badge-tag" style="background:var(--blue);">Strong Signal</span></div>
+              <p>5G Home gateway connects wirelessly to nearby mid-band tower.</p>
+            </div>
+          </div>
+          <a href="internet.html" class="btn btn-ink full" style="margin-top: 24px;"><span>Compare Local Plans</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="cta">
+    <div class="container">
+      <div class="cta-row">
+        <h2 class="h2">Find the right signal. <span class="serif">We guarantee compatibility.</span></h2>
+        <div class="cta-actions">
+          <a href="tel:+18885550142" class="btn btn-light"><span>Call (888) 555‑0142</span></a>
+          <a href="cart.html" class="btn btn-ghost"><span>View Cart (<span class="cart-count">0</span>)</span></a>
+        </div>
+      </div>
+      <div class="wordmark" aria-hidden="true"><span>w</span><span>e</span><span>s</span><span>e</span><span>l</span><span>l</span><span class="dot">.</span></div>
+      <div class="footer-row mono">
+        <span>© 2026 We Sell Broadband · wesellbroadband.com</span>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="internet.html">Internet</a>
+          <a href="mobile.html">Cell Plans</a>
+          <a href="phones.html">Phones</a>
+          <a href="coverage.html">Coverage</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" role="status"><i></i><span id="toastText">Added to cart</span></div>
+  <script src="app.js"></script>
+</body>
+</html>
